@@ -1,5 +1,3 @@
-Hello world
-
 # Cosas nuevas
 
 ## Instalar golang
