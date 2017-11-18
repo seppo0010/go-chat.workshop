@@ -73,3 +73,5 @@ descripción del error y salir con un estado distinto de cero
 
 A partir de acá la idea es que intenten solucionarlo sin ver la respuesta.
 Si se rinden, la respuesta está disponible en el subdirectorio _solucion_.
+
+[Siguiente](../04_HelloState)
