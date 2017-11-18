@@ -128,3 +128,5 @@ mensajes y una _goroutine_ que vaya agregandolos a la lista.
 Para agregar un mensaje, publicarlo en el canal. Para leer los mensajes,
 simplemente devolver la lista ya que no es un problema el acceso
 concurrente cuando es sólo lectura.
+
+[Siguiente](../06_HelloMyErrors)

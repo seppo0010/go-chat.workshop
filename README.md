@@ -20,3 +20,4 @@ lo aprendido en ese paso y los anteriores.
 * [Hello Errors](03_HelloErrors)
 * [Hello State](04_HelloState)
 * [Hello Concurrency](05_HelloConcurrency)
+* [Hello My Errors](06_HelloMyErrors)
