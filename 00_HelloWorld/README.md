@@ -27,7 +27,8 @@ imprime un string seguido de un salto de línea en el _standard output_.
 
 # Hello World
 
-Crear un archivo _main.go_ que al ejecutarlo diga "hello world".
+Crear un archivo _main.go_ que al ejecutarlo diga "hello world". Para
+ejecutarlo, correr `go run main.go`
 
 ## Solución
 
