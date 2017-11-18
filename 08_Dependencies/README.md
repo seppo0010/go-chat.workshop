@@ -152,3 +152,5 @@ Agregar _gorilla_ como dependencia, y en `/ws` se cree un websocket
 para el cliente. Cuando se crea, nos subscribimos al servidor y cada
 mensaje que recibimos se lo enviamos a la conexión como _JSON_. Si falla
 la escritura, desuscribimos el canal y cerramos la conexión.
+
+[Siguiente](../09_ConcurrencyII)

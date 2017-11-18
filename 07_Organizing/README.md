@@ -38,3 +38,5 @@ Ahora tenemos bien diferenciada el código del servidor de mensajes y la
 que se encarga de manejar pedidos HTTP. Podemos extraer el servidor a su
 propio archivo y así _main.go_ sólo se encarga de conectar al servidor
 HTTP con el servidor de datos.
+
+[Siguiente](../08_Dependencies)

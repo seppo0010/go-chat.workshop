@@ -22,3 +22,7 @@ lo aprendido en ese paso y los anteriores.
 * [Hello Concurrency](05_HelloConcurrency)
 * [Hello My Errors](06_HelloMyErrors)
 * [Hello Organizing](07_Organizing)
+* [Hello Dependencies](08_Dependencies)
+* [Hello Concurrency II](09_ConcurrencyII)
+* [Hello Databases](10_HelloDatabases)
+* [Hello Tests](11_HelloTests)
