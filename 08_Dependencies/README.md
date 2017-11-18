@@ -15,7 +15,7 @@ patrones comunes disponibles para copiar y pegar acá
 https://github.com/golang/go/wiki/SliceTricks
 
 ```golang
-myList := []int{1, 2, 3, 4, 5, 6}``
+myList := []int{1, 2, 3, 4, 5, 6}
 fmt.Println(len(myList)) // 6
 fmt.Println(myList[3]) // 4
 for index, value := range myList {
