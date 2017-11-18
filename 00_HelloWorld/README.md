@@ -26,6 +26,12 @@ también _main_.
 _println_ es una función especial del lenguaje que
 imprime un string seguido de un salto de línea en el _standard output_.
 
+### _The Go Playground_
+
+Para hacer pequeñas pruebas de _go_, se puede usar el _Playground_, un editor
+online que ejecuta el código que introduzcamos.
+
+https://play.golang.org/
 
 ## Instrucciones
 
