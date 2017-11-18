@@ -12,7 +12,7 @@ del _package_ usando los prefijos _var_ y _const_, y pueden ser accedidos
 por funciones dentro del _package_, o, de estar en mayúsculas, por
 cualquier _package_ que lo importe.
 
-```
+```golang
 var number = 1
 const StringValue = ""
 func MyFunction() {
