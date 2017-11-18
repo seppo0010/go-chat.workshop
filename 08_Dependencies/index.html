@@ -1,0 +1,43 @@
+<body>
+<form id="send">
+<input type="text" id="message"><input type="submit" value="Enviar">
+</form>
+<div id="data">
+</div>
+</body>
+<style>
+#data {
+    white-space: pre-wrap;
+}
+</style>
+<script>
+function writeMessage(data) {
+    document.getElementById('data').innerHTML += "&lt;" + data.Author + "&gt; " + data.Content + "\n"
+}
+
+var socket = new WebSocket("ws://localhost:8080/ws");
+socket.onmessage = function (event) {
+    var data = JSON.parse(event.data)
+    writeMessage(data)
+}
+
+var request = new XMLHttpRequest();
+request.open('GET', '/messages', true);
+request.onload = function() {
+  var data = JSON.parse(request.responseText);
+  for (var i = 0; i < data.length; i++) {
+      writeMessage(data[i])
+  }
+};
+request.send();
+
+document.getElementById('send').addEventListener('submit', function(event) {
+    var request = new XMLHttpRequest();
+    request.open('POST', '/messages', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send('author=me&content=' + encodeURI(document.getElementById('message').value));
+    document.getElementById('message').value = ''
+    event.preventDefault();
+    return false;
+}, false)
+</script>
