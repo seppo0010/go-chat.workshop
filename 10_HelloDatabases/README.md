@@ -139,7 +139,7 @@ cuando es dentro de un websocket, desconectar al cliente.
 
 La implementación de Server existente ahora será ServerMemory.
 Implementar ServerRedis usando la base de datos correspondiente.
-Atención con como se maneja la desuscripción de los clientes que puede
+Atención con cómo se maneja la desuscripción de los clientes que puede
 permitir errores de concurrencia.
 
 Recibir un parámetro al iniciarse el servidor que sea _--redis_ o

@@ -3,7 +3,7 @@
 ## Cosas Nuevas
 
 Hagamos ahora que el servidor web reciba mensajes por post y se puedan
-consultar por get
+consultar por get.
 
 ### Globales
 

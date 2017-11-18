@@ -6,8 +6,8 @@
 
 Podemos tener más de un archivo en el _package_, en cuyo caso todos los
 identificadores que declaran se comparten y no es necesario hacer ningún
-_import_ entre ellos, aunque sí cada uno tiene que importar cada modulo
-externo que vaya a usar.
+_import_ entre ellos, aunque sí cada uno tiene que importar cada módulo
+externo que vaya a usar.s
 
 `main.go`
 ```golang

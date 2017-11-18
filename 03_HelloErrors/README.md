@@ -60,7 +60,7 @@ es una interfaz que sólo implementa el método `Error() string`.
 Cualquier operación que pueda fallar suele devolver un _error_ que es
 _nil_ en caso de éxito y no nulo en caso de fallo. Cada vez que se
 invoca a una función que puede fallar _habría que_ verificar la
-respuesta, comparandola con _nil_ y manejar el fallo o hacer que la función
+respuesta, comparándola con _nil_ y manejar el fallo o hacer que la función
 que invoca devuelva el error.
 
 ## Instrucciones
