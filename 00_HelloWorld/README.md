@@ -1,6 +1,8 @@
-# Cosas nuevas
+# Hello World
 
-## Instalar golang
+## Cosas nuevas
+
+### Instalar golang
 
 El primer paso para usar golang es instalarlo :)
 
@@ -11,7 +13,7 @@ En Ubuntu, `apt install golang`.
 Para otros sistemas operativos buscar la distribución oficial en
 https://golang.org/
 
-## Punto de entrada
+### Punto de entrada
 
 Todos los archivos de go pertenecen a un _package_. Cada directorio sólo
 puede tener un _package_ y todos sus archivos tienen que declararse
@@ -19,18 +21,18 @@ parte del mismo.
 El _package_ ejecutable se tiene que llamar _main_ y la función principal
 también _main_.
 
-## Imprimir
+### Imprimir
 
 _println_ es una función especial del lenguaje que
 imprime un string seguido de un salto de línea en el _standard output_.
 
 
-# Hello World
+## Instrucciones
 
 Crear un archivo _main.go_ que al ejecutarlo diga "hello world". Para
 ejecutarlo, correr `go run main.go`
 
-## Solución
+### Solución
 
 ```golang
 package main
