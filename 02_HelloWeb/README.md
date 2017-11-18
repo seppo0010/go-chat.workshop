@@ -10,7 +10,7 @@ servidor http, escuchar en un puerto y responder peticiones.
 Para importar un _package_ alcanza con poner `import "packagename"` si
 está en la [stdlib](https://golang.org/pkg/). Si se quieren hacer
 múltiples _imports_ en el mismo archivo se usa una vez la palabra
-_import_ y el resto se pone entre parentesis, una por línea. Por
+_import_ y el resto se pone entre paréntesis, una por línea. Por
 convención se hace alfabéticamente. Por ejemplo:
 
 ```golang

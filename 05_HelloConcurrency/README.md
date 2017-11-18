@@ -2,7 +2,7 @@
 
 En el paso anterior teníamos un error sutil pero crítico: no estabamos
 manejando correctamente las conexiones concurrentes. Las listas (o
-_slices_) en _go_ no pueden ser escrita desde dos _threads_ porque la
+_slices_) en _go_ no pueden ser escritas desde dos _threads_ porque la
 función _append_ no es atómica, por lo que si dos usuarios estuviesen
 escribiendo mensajes a la vez nuestro código fallaría.
 
@@ -68,7 +68,7 @@ Hasta ahora veníamos pasando variables _por valor_ pero también se puede
 hacer _por referencia_, tanto para los parámetros como para los
 _struct_s que implementan los métodos. Esto hace que no se copien los datos
 cada vez que una función es invocada, y que al modificarse su contenido
-dentro de la función, el cambio se vea reflejado afuer.
+dentro de la función, el cambio se vea reflejado afuera.
 Si en vez de usar una referencia, recibimos una variable por valor y lo
 modificamos lo que cambia es la copia local y el cambio no se propaga.
 
@@ -123,7 +123,7 @@ los métodos _addMessage_ y _getMessages_. El primero recibe un puntero a
 un mensaje y el segundo devuelve una lista de punteros a un mensaje.
 
 En el _constructor_ de la estructura, crear un canal donde publicar los
-mensajes y una _goroutine_ que vaya agregandolos a la lista.
+mensajes y una _goroutine_ que vaya agregándolos a la lista.
 
 Para agregar un mensaje, publicarlo en el canal. Para leer los mensajes,
 simplemente devolver la lista ya que no es un problema el acceso

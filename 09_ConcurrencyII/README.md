@@ -6,7 +6,7 @@
 
 Ya vimos que podíamos recibir mensajes de un _chan_, y que el _thread_
 queda esperando hasta que eso pase. También podemos recibir de
-cualquiera de multiples canales usando _select_ y un _case_ por cada
+cualquiera de múltiples canales usando _select_ y un _case_ por cada
 canal que queremos esperar. El primero que esté disponible va a ser
 llamado.
 

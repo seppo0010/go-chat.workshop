@@ -41,9 +41,9 @@ func myFunc(args ...interface{}) {
 ```
 
 También es interesante es que se puede invocar una función expandiendo
-una lista en los argumentos, es decir que si se tiene un _[]interface{}_
+una lista en los argumentos, es decir que si se tiene un _[]interface{}_,
 eso puede usarse como parámetro para _myFunc_ agregando tres puntos
-al final de la variable
+al final de la variable.
 
 ```golang
 myVar := []interface{}{1, 2, "3"}
@@ -51,7 +51,7 @@ myFunc(myVar...)
 ```
 
 Esto nos permite, usando la función _append_, crear una nueva lista
-quitando uno de los elementos de una lista que se tiene
+quitando uno de los elementos de una lista que se tiene.
 
 ```golang
 myList := []int{1, 2, 3, 4}
@@ -104,7 +104,7 @@ recibir y mandar mensajes una vez cargada la página.
 [_gorilla_](https://github.com/gorilla/websocket) es una librería de
 _go_ para manejar estas conexiones fácilmente. En su
 [documentación](https://godoc.org/github.com/gorilla/websocket)
-podemos ver un ejemplo de como usarla.
+podemos ver un ejemplo de cómo usarla.
 
 ```golang
 var upgrader = websocket.Upgrader{
