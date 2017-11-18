@@ -35,3 +35,5 @@ servidor HTTP debería devolver un código de estado 400.
 
 Después de escribir el código de estado, podemos escribir un JSON que en
 la clave `error` indique el mensaje correspondiente.
+
+[Siguiente](../07_Organizing)
