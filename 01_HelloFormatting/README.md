@@ -8,3 +8,5 @@ se usan tabs.
 
 Para ejecutarlo simplemente vamos a ir al directorio de nuestro código y
 correr `go fmt`.
+
+[Siguiente](../02_HelloWeb)
