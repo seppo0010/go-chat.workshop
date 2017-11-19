@@ -66,7 +66,7 @@ func NewMyStruct() MyStruct {
 
 Hasta ahora veníamos pasando variables _por valor_ pero también se puede
 hacer _por referencia_, tanto para los parámetros como para los
-_struct_s que implementan los métodos. Esto hace que no se copien los datos
+_struct_ que implementan los métodos. Esto hace que no se copien los datos
 cada vez que una función es invocada, y que al modificarse su contenido
 dentro de la función, el cambio se vea reflejado afuera.
 Si en vez de usar una referencia, recibimos una variable por valor y lo
