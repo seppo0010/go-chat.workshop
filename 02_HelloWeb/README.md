@@ -117,6 +117,9 @@ _net/http_ son utilitarios para hacer un servidor web sencillo.
 Una vez que esté corriendo, abrir un explorador e ir a http://localhost:8080/
 en donde deberíamos leer `Hello world`.
 
+Una vez terminada la prueba, con ctrl+C en la terminal donde están ejecutando
+el programa se puede salir.
+
 ### Solución
 
 ```golang
