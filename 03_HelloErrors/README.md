@@ -66,9 +66,9 @@ métodos. Se consideran implementadas automáticamente por cualquier tipo de
 dato que tenga *todos* los métodos listados.
 
 ```golang
-type SumAndSubstract interface {
+type SumAndSubtract interface {
 	sum(number int) int
-	substract(number int) int
+	subtract(number int) int
 }
 
 type OneNumber struct {
@@ -79,7 +79,7 @@ func (me OneNumber) sum(number2 int) int {
 	return me.number + number2
 }
 
-func (me OneNumber) substract(number2 int) int {
+func (me OneNumber) subtract(number2 int) int {
 	return me.number - number2
 }
 
@@ -92,12 +92,12 @@ func (me TwoNumbers) sum(number3 int) int {
 	return me.number1 + me.number2 + number3
 }
 
-func (me TwoNumbers) substract(number3 int) int {
+func (me TwoNumbers) subtract(number3 int) int {
 	return me.number1 + me.number2 - number3
 }
 
 func main() {
-	var v SumAndSubstract
+	var v SumAndSubtract
 	v = TwoNumbers{number1: 1, number2: 3}
 	println(v.sum(5)) // 9
 	v = OneNumber{number: 1}
@@ -113,17 +113,17 @@ las interfaces no tienen tanto sentido como en un lenguaje con tipos estáticos.
 Las interfaces permiten declarar que un parámetro o variable es de un tipo
 desconocido, pero del cual se conoce cierto comportamiento. Por ejemplo,
 siguiendo el caso anterior, se puede declarar una función que reciba dos
-_SumAndSubstract_ y opere con ellos sin saber exactamente de qué tipo son.
+_SumAndSubtract_ y opere con ellos sin saber exactamente de qué tipo son.
 
 ```golang
-func operate(v1 SumAndSubstract, v2 SumAndSubstract, v3 int) int {
-	return v1.substract(v2.sum(1))
+func operate(v1 SumAndSubtract, v2 SumAndSubtract, v3 int) int {
+	return v1.subtract(v2.sum(v3))
 }
 
 func main() {
 	v1 := TwoNumbers{number1: 10, number2: 100}
 	v2 := OneNumber{number: 1000}
-	v3 := 10000
+	v3 := 1
 	println(operate(v1, v2, v3)) // -891
 	println(operate(v2, v1, v3)) // 889
 }
