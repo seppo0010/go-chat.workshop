@@ -121,11 +121,29 @@ invoca a una función que puede fallar _habría que_ verificar la
 respuesta, comparándola con _nil_ y manejar el fallo o hacer que la función
 que invoca devuelva el error.
 
+### Cómo leer la documentación de _go_
+
+En https://golang.org/pkg/ está la documentación de los _packages_ que vienen
+en _go_. Cada uno de ellos empieza diciendo cómo importarlo, para qué sirve,
+y luego una lista de funciones y estructuras que contiene.
+
+Por ejemplo, el _package_ _os_  se importa con `import "os"` y tiene una
+función _Exit_, según se puede ver acá: https://golang.org/pkg/os/#Exit
+
+```golang
+package main
+
+import "os"
+
+func main() {
+    os.Exit(2)
+}
+```
+
 ## Instrucciones
 
 Recibir el error de _ListenAndServe_ y si no es nulo imprimir la
-descripción del error y salir con un estado distinto de cero
-([Pista](https://golang.org/pkg/os/#Exit)).
+descripción del error y salir con un estado distinto de cero.
 
 ### Solución
 
