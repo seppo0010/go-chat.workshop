@@ -150,4 +150,19 @@ descripción del error y salir con un estado distinto de cero.
 A partir de acá la idea es que intenten solucionarlo sin ver la respuesta.
 Si se rinden, la respuesta está disponible en el subdirectorio _solucion_.
 
+Para probar cómo hacer que falle se puede ejecutar el programa dos veces.
+La primera tendría que tener éxito, pero la segunda falla porque el primer
+proceso ya está usando el puerto.
+
+Se debería ver algo así
+
+```bash
+$ go run main.go &
+[1] 86196
+$ go run main.go
+listen tcp :8080: bind: address already in use
+exit status 1
+$
+```
+
 [Siguiente](../04_HelloState)
