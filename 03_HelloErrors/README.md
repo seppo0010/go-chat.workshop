@@ -33,8 +33,8 @@ func (me MyStruct) sum(number3 int) int {
 }
 
 func main() {
-	let myStruct = MyStruct{number1: 1, number2: 3}
-	let value = myStruct.sum(5)
+	myStruct := MyStruct{number1: 1, number2: 3}
+	value := myStruct.sum(5)
 	println(value) // 9
 }
 ```
