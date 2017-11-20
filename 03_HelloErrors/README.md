@@ -19,7 +19,9 @@ func (me MyStruct) sum(number3 int) int {
 }
 
 func main() {
-	fmt.Println(MyStruct{number1: 1, number2: 3}.sum(5)) // 9
+	let myStruct = MyStruct{number1: 1, number2: 3}
+	let value = myStruct.sum(5)
+	fmt.Println(value) // 9
 }
 ```
 
