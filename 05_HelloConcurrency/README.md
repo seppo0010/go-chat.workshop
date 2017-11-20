@@ -76,6 +76,13 @@ Para representar un tipo de puntero usar el prefijo _\*_ en la
 declaración, y para obtener el puntero a una variable el prefijo _&_.
 Para obtener el valor de un puntero, se dereferencia con _\*_.
 
+En general, van a querer que todos los métodos declarados actúen sobre un
+puntero al _struct_ y no sobre el _struct_ mismo para evitar hacer copias
+innecesariamente, e incluso no perder cambios que se hayan hecho.
+
+Lo mismo aplica al constructor, en vez de crear un _struct_ conviene crear
+un _puntero a un struct_.
+
 ```golang
 type MyStruct struct {
 	number int
@@ -88,7 +95,7 @@ func (s *MyStruct) Swap(val *int) {
 }
 
 func main() {
-	s := MyStruct{number: 1}
+	s := &MyStruct{number: 1}
 	val := 2
 	s.Swap(&val)
 	fmt.Println(val, s.number) // 1 2
