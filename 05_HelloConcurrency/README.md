@@ -137,4 +137,11 @@ Para agregar un mensaje, publicarlo en el canal. Para leer los mensajes,
 simplemente devolver la lista ya que no es un problema el acceso
 concurrente cuando es sólo lectura.
 
+La idea final es que cada pedido HTTP sólo agregue el mensaje al canal, ya
+que ocurren en distintos hilos y el canal maneja la sincronización, y tener
+un hilo y sólo uno encargado de recibir los mensajes de ese canal y pasarlos
+a la lista de mensajes.
+
+![Múltiples peticiones HTTP escribiendo sobre un canal, sólo el canal escribiendo sobre la lista](https://raw.githubusercontent.com/seppo0010/go-chat.workshop/master/05_HelloConcurrency/sincronizacion.png)
+
 [Siguiente](../06_HelloMyErrors)
