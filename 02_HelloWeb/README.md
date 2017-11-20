@@ -76,6 +76,11 @@ segunda de números del 0 al 255. La diferencia aparece con caracteres
 que no son ASCII, en donde las runas toman como unidad al caracter que
 se imprime mientras que los _bytes_ no.
 
+```golang
+println(len([]byte("🍑"))) // 4
+println(len([]rune("🍑"))) // 2
+```
+
 La forma de invocar una conversión de tipo es llamar al tipo como si
 fuese una función.
 
