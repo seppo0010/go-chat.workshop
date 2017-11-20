@@ -89,13 +89,18 @@ de los valores no pueda ser representado en json como un número complejo.
 Por ahora, podemos ignorar el error, en cuyo caso se le asigna a una variable
 de nombre `_` (guión bajo) que el compilador entiende que no se va a usar.
 
+Cuidado con el nombre de las propiedades y su visibilidad, porque las
+propiedades que sean privadas van a ser ignoradas por _json_ dado que no las
+puede ver.
+
 ```golang
 type MyStruct struct {
 	Number  int
 	Strings []string
+	privateProperty int
 }
 
-myStruct := &MyStruct{Number: 3, Strings: []string{"hello", "world"}}
+myStruct := &MyStruct{Number: 3, Strings: []string{"hello", "world"}, privateProperty: 1}
 serialized, _ := json.Marshal(myStruct)
 fmt.Println("serialized", string(serialized)) // serialized {"Number":3,"Strings":["hello","world"]}
 
