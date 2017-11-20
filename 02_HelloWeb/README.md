@@ -78,7 +78,7 @@ se imprime mientras que los _bytes_ no.
 
 ```golang
 println(len([]byte("🍑"))) // 4
-println(len([]rune("🍑"))) // 2
+println(len([]rune("🍑"))) // 1
 ```
 
 La forma de invocar una conversión de tipo es llamar al tipo como si
