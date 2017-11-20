@@ -2,6 +2,17 @@
 
 ## Cosas nuevas
 
+### _if_
+
+Los _if_ en _go_ son muy parecidos a los del resto de los lenguajes, salvo
+quizás porque no requiere paréntesis para las condiciones.
+
+```golang
+if 1 < 2 && 3 >= 0 {
+    println("el compilador sabe comparar números")
+}
+```
+
 ### Estructuras
 
 Las estructuras de datos pueden contener multiples valores e implementar
