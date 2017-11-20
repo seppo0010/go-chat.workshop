@@ -2,6 +2,8 @@
 
 Escribir código en golang es como comer una naranja.
 
+![Homero comiendo una naranja](https://github.com/seppo0010/go-chat.workshop/raw/master/src/lorange.jpg)
+
 _Go_ es un lenguaje de programación creado por Google en 2009.
 
 Vamos a ver cómo crear un servidor web donde los usuarios pueden chatear en
