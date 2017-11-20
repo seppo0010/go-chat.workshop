@@ -14,6 +14,9 @@ type MyStruct struct {
 	number2 int
 }
 
+// declaramos el método sum en la estructura MyStruct
+// `me` es el nombre que va a tener la estructura dentro del método
+// cualquier instancia de la estructura va a tener este método disponible
 func (me MyStruct) sum(number3 int) int {
 	return me.number1 + me.number2 + number3
 }
