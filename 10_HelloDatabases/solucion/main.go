@@ -18,7 +18,8 @@ func handleMessagesRequest(w http.ResponseWriter, r *http.Request) {
 		})
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
-			json.NewEncoder(w).Encode(map[string]string{"error": err.Error()})
+			j, _ := json.Marshal(map[string]string{"error": err.Error()})
+			w.Write(j)
 			return
 		}
 		return
@@ -30,7 +31,8 @@ func handleMessagesRequest(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(500)
 			return
 		}
-		json.NewEncoder(w).Encode(messages)
+		j, _ := json.Marshal(messages)
+		w.Write(j)
 		return
 	}
 	w.WriteHeader(http.StatusMethodNotAllowed)

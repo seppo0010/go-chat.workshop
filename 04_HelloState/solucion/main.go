@@ -21,7 +21,8 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 			Content: r.PostFormValue("content"),
 		})
 	} else if r.Method == http.MethodGet {
-		json.NewEncoder(w).Encode(messages)
+		j, _ := json.Marshal(messages)
+		w.Write(j)
 	}
 }
 

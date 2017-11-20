@@ -78,32 +78,6 @@ if astr, ok := a.(string); ok {
 }
 ```
 
-### _json.Marshal_ & _json.Unmarshal_
-
-Las funciones _Marshal_ y _Unmarshal_ permiten serializar y deserializar
-cualquier tipo de variable.
-
-```golang
-type MyStruct struct {
-	Number  int
-	Strings []string
-}
-
-myStruct := &MyStruct{Number: 3, Strings: []string{"hello", "world"}}
-serialized, err := json.Marshal(myStruct)
-if err != nil {
-	return
-}
-fmt.Println("serialized", string(serialized)) // serialized {"Number":3,"Strings":["hello","world"]}
-
-var otherStruct MyStruct
-err = json.Unmarshal(serialized, &otherStruct)
-if err != nil {
-	return
-}
-fmt.Println("deserialized", otherStruct) // deserialized {3 [hello world]}
-```
-
 ### Redis
 
 Redis es una base de datos que se adecua al caso de uso que tenemos

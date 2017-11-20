@@ -80,17 +80,32 @@ a = "hello"
 ### JSON
 
 _go_ viene con soporte de [JSON](https://golang.org/pkg/encoding/json/).
-Para obtener la representación en JSON de cualquier variable, hay que
-crear un _Encoder_ con
-[_NewEncoder_](https://golang.org/pkg/encoding/json/#NewEncoder) con un
-[io.Writer](https://golang.org/pkg/io/#Writer) y después llamar
-[_Encode_](https://golang.org/pkg/encoding/json/#Encoder.Encode) con el
-valor que queremos. El parámetro es de tipo `interface{}` así que
-cualquier enviar cualquier cosa. Sobre el _Writer_ se va a escribir la
-serialización del valor. Hay distintas implementaciones de _Writer_, se puede
-usar para escribir [en memoria](https://golang.org/pkg/bytes/#Buffer),
-[en archivos](https://golang.org/pkg/os/#File),
-[en red](https://golang.org/pkg/net/#TCPConn), etc.
+
+Las funciones _Marshal_ y _Unmarshal_ permiten serializar y deserializar
+cualquier tipo de variable. La función marshal devuelve un array de bytes,
+que puede ser usado luego por la el método Write ;), y un error en caso de
+haber fallado. Los fallos son en condiciones poco comunes, como que alguno
+de los valores no pueda ser representado en json como un número complejo.
+Por ahora, podemos ignorar el error, en cuyo caso se le asigna a una variable
+de nombre _\__ que el compilador entiende que no se va a usar
+
+```golang
+type MyStruct struct {
+	Number  int
+	Strings []string
+}
+
+myStruct := &MyStruct{Number: 3, Strings: []string{"hello", "world"}}
+serialized, _ := json.Marshal(myStruct)
+fmt.Println("serialized", string(serialized)) // serialized {"Number":3,"Strings":["hello","world"]}
+
+var otherStruct MyStruct
+err = json.Unmarshal(serialized, &otherStruct)
+if err != nil {
+	return
+}
+fmt.Println("deserialized", otherStruct) // deserialized {3 [hello world]}
+```
 
 ## Instrucciones
 
