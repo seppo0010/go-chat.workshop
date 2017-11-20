@@ -39,6 +39,26 @@ func main() {
 }
 ```
 
+#### Debuggear
+
+Si se quiere ver el contenido de un struct, se puede usar el _package_ _fmt_
+que tiene una opción para ver el contenido de cualquier variable, algo parecido
+al _console.log_ de javascript.
+
+```golang
+import "fmt"
+
+type MyStruct struct {
+	number1 int
+	number2 int
+}
+
+func main() {
+	myStruct := MyStruct{number1: 1, number2: 3}
+	fmt.Printf("%#v\n", myStruct)
+}
+```
+
 ### Interfaces
 
 Las interfaces son tipos de datos que implementan un conjunto de
