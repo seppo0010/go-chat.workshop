@@ -87,7 +87,7 @@ que puede ser usado luego por la el método Write ;), y un error en caso de
 haber fallado. Los fallos son en condiciones poco comunes, como que alguno
 de los valores no pueda ser representado en json como un número complejo.
 Por ahora, podemos ignorar el error, en cuyo caso se le asigna a una variable
-de nombre _\__ que el compilador entiende que no se va a usar
+de nombre _\__ (guión bajo) que el compilador entiende que no se va a usar.
 
 ```golang
 type MyStruct struct {
