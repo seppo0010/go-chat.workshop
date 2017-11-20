@@ -18,6 +18,13 @@ https://golang.org/
 Todos los archivos de go pertenecen a un _package_. Cada directorio sólo
 puede tener un _package_ y todos sus archivos tienen que declararse
 parte del mismo.
+Al inicio de cada archivo de _go_ se tiene que declarar a qué package
+pertenece el mismo.
+
+```golang
+package mypackage
+```
+
 El _package_ ejecutable se tiene que llamar _main_ y la función principal
 también _main_.
 
