@@ -82,7 +82,7 @@ a = "hello"
 _go_ viene con soporte de [JSON](https://golang.org/pkg/encoding/json/).
 
 Las funciones _Marshal_ y _Unmarshal_ permiten serializar y deserializar
-cualquier tipo de variable. La función marshal devuelve un array de bytes,
+cualquier tipo de variable. La primera devuelve un array de bytes,
 que puede ser usado luego por la el método Write ;), y un error en caso de
 haber fallado. Los fallos son en condiciones poco comunes, como que alguno
 de los valores no pueda ser representado en json como un número complejo.
