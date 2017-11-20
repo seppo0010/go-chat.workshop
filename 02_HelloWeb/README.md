@@ -123,12 +123,15 @@ en donde deberíamos leer `Hello world`.
 import "net/http"
 
 func handleRequest(w http.ResponseWriter, r *http.Request) {
-        w.Write([]byte("Hello world"))
+	// La función Write recibe []byte, pero cuando creamos con comillas
+	// el valor es string; como go no hace la conversión automáticamente,
+	// tenemos que castear para poder pasarle este valor.
+	w.Write([]byte("Hello world"))
 }
 
 func main() {
-        http.HandleFunc("/", handleRequest)
-        http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", handleRequest)
+	http.ListenAndServe(":8080", nil)
 }
 ```
 
