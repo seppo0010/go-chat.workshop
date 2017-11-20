@@ -135,6 +135,10 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", handleRequest)
 	http.ListenAndServe(":8080", nil)
+	// la función ListenAndServe, cuando tiene éxito, se queda esperando
+	// por nuevas conexiones y nunca devuelve ningún valor, por lo que la
+	// siguiente línea no va a ser ejecutada
+	println("nunca voy a aparecer")
 }
 ```
 
