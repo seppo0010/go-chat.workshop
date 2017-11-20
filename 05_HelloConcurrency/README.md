@@ -74,6 +74,7 @@ modificamos lo que cambia es la copia local y el cambio no se propaga.
 
 Para representar un tipo de puntero usar el prefijo _\*_ en la
 declaración, y para obtener el puntero a una variable el prefijo _&_.
+Para obtener el valor de un puntero, se dereferencia con _\*_.
 
 ```golang
 type MyStruct struct {
