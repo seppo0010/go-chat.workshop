@@ -56,7 +56,7 @@ del _Request_.
 func myHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		// manejar post
-		value := r.FormPostValue("key")
+		value := r.PostFormValue("key")
 		println(value)
 	} else if r.Method == http.MethodGet {
 		// manejar get
